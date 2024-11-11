@@ -10,6 +10,9 @@ import '../services/messaging_service.dart';
 import '../widgets/home.dart';
 import '../widgets/mess.dart';
 import '../widgets/bus.dart';
+//Yasir's code Starts here
+import '../FoodOrder/foodOrder.dart';
+//Yasir's code Ends here
 import './qr.dart';
 import './notification.dart';
 import 'package:adaptive_theme/adaptive_theme.dart';
@@ -45,6 +48,18 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         actions: [
+        
+          IconButton(
+            icon: const Icon(Icons.restaurant),
+             onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const FoodOrderPage()),
+                    );
+                  },
+          ),
+          //Yasir's code Ends here
           IconButton(
             icon: const Icon(Icons.qr_code),
             onPressed: () => Navigator.of(context)
@@ -81,6 +96,13 @@ class _HomeScreenState extends State<HomeScreen> {
           alignment: Alignment.center,
           child:  MapPage(),
         ),
+        //Yasir's code Starts here
+        // Container(
+        //   color: Colors.white,
+        //   alignment: Alignment.center,
+        //   child: const MorePage(),
+        // ),
+        //Yasir's code Ends here
         Container(
           color: Colors.white,
           alignment: Alignment.center,
@@ -110,6 +132,16 @@ class _HomeScreenState extends State<HomeScreen> {
             selectedIcon: Icon(Icons.map_sharp),
             label: 'Campus Map',
           ),
+          // //Yasir's code Starts here
+
+          // NavigationDestination(
+          //   icon: Icon(Icons.restaurant),
+          //   selectedIcon: Icon(Icons.restaurant),
+          //   label: 'Order Food',
+          // ),
+
+          // //Yasir's code Ends here
+          
           NavigationDestination(
             icon: Icon(Icons.more_horiz_outlined),
             selectedIcon: Icon(Icons.more_horiz),
