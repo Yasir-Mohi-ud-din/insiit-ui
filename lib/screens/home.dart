@@ -55,7 +55,11 @@ class _HomeScreenState extends State<HomeScreen> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const FoodOrderPage()),
+                          builder: (context) =>  FoodOrderPage(
+                              title: 'Order Food',
+                              back: true,
+                              prefs: null
+                          )),
                     );
                   },
           ),

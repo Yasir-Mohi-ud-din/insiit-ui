@@ -1,98 +1,65 @@
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
+import './modularCard.dart';
+class FoodOrderPage extends StatefulWidget {
+  final String title;
+  final bool back;
+  final prefs;
 
-class FoodOrderPage extends StatelessWidget {
-  const FoodOrderPage({Key? key}) : super(key: key);
+  FoodOrderPage(
+      {super.key,
+        required this.title,
+        required this.back,
+        this.prefs = null,});
+  @override
+  State<FoodOrderPage> createState() => _FoodOrderPageState();
+}
 
+class _FoodOrderPageState extends State<FoodOrderPage> {
+  String title = "";
+  bool back = false;
+  var prefs;
+  @override
+  void initState() {
+    super.initState();
+
+    back = widget.back;
+    title = widget.title;
+    prefs = widget.prefs;
+  }
   @override
   Widget build(BuildContext context) {
+    List<dynamic>details_list = [];
+    details_list.add(["1","Tea Post"]);
+    details_list.add(["2","Dawat"]);
+    details_list.add(["3","canteen"]);
+    Map<String, dynamic> details_map = {
+      "items": details_list,
+    };
     return Scaffold(
       appBar: AppBar(
-        title: Text('Food Ordering  Facilities '),
+        backgroundColor: Colors.white,
+        bottomOpacity: 20,
+        foregroundColor: Colors.black54,
+        automaticallyImplyLeading: false,
+        leading: (back == true)
+            ? IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        )
+            : null,
         centerTitle: true,
-      ),
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Card(
-                elevation: 1,
-                margin: EdgeInsets.symmetric(vertical: 10),
-                child: Padding(
-                  padding: EdgeInsets.all(16),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Location:',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 18,
-                        ),
-                      ),
-                      GestureDetector(
-                        onTap: () {
-                          // Handle location navigation
-                        },
-                        child: Text(
-                          ' IITGN Campus',
-                          style: TextStyle(
-                            fontSize: 16,
-                            decoration: TextDecoration.underline,
-                          ),
-                        ),
-                      ),
-                      SizedBox(height: 10),
-                      Row(
-                        children: [
-                          Text(
-                            'will be available soon InshaAllah',
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 18,
-                            ),
-                          ),
-                          SizedBox(width: 10),
-                          Text(
-                            '',
-                            style: TextStyle(fontSize: 16),
-                          ),
-                        ],
-                      ),
-                      SizedBox(height: 10),
-                      Row(
-                        children: [
-                          Text(
-                            '',
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 18,
-                            ),
-                          ),
-                          SizedBox(width: 10),
-                          Text(
-                            '',
-                            style: TextStyle(fontSize: 16),
-                          ),
-                          SizedBox(width: 10),
-                          IconButton(
-                            icon: Icon(Icons.call), 
-                            onPressed: () {
-                              launch('');
-                            },
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            ],
+        title: Container(
+          child: Text(
+            '${title}',
+            style: TextStyle(
+              color: Colors.black54,
+            ),
           ),
         ),
       ),
+      body: ModularResultCard(params: details_map),
     );
   }
 }
