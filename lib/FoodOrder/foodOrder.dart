@@ -29,9 +29,9 @@ class _FoodOrderPageState extends State<FoodOrderPage> {
   @override
   Widget build(BuildContext context) {
     List<dynamic>details_list = [];
-    details_list.add(["1","Tea Post"]);
-    details_list.add(["2","Dawat"]);
-    details_list.add(["3","canteen"]);
+    details_list.add(["lib/FoodOrder/assets/images/image.png","Tea Post"]);
+    details_list.add(["lib/FoodOrder/assets/images/image.png","Dawat"]);
+    details_list.add(["lib/FoodOrder/assets/images/image.png","canteen"]);
     Map<String, dynamic> details_map = {
       "items": details_list,
     };
@@ -59,7 +59,7 @@ class _FoodOrderPageState extends State<FoodOrderPage> {
           ),
         ),
       ),
-      body: ModularResultCard(params: details_map),
+      body: SingleChildScrollView(child: ModularResultCard(params: details_map)),
     );
   }
 }

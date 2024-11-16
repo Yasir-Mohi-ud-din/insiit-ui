@@ -25,15 +25,19 @@ class _ModularResultCardState extends State<ModularResultCard> {
     hasCallback = params['callback'] != null;
     parentOnPressed = widget.parentOnPressed;
   }
-
+  
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.sizeOf(context);
+                        //  final double width = size.width;
+                        //  final double height = size.height;
     return TextButton(
         onPressed: hasCallback ? onPressed : null,
         style: ElevatedButton.styleFrom(
           backgroundColor: Colors.transparent,
         ),
         child: SizedBox(
+          
           width: double.infinity,
           child: Card(
             margin: const EdgeInsets.symmetric(horizontal: 5, vertical: 1.5),
@@ -53,7 +57,10 @@ class _ModularResultCardState extends State<ModularResultCard> {
                                 style: const TextStyle(
                                   fontSize: 20,
                                   fontFamily: 'Quicksand',
+                                  
                                   // fontWeight: FontWeight.w600,
+                                  //center
+
                                 ),
                               ),
                               SizedBox(
@@ -64,12 +71,15 @@ class _ModularResultCardState extends State<ModularResultCard> {
                           ),
                         )
                       : Text(''),
+                      
                   for (List<String> param in params['items'])
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(param[0] + ":", style: TextStyle(fontSize: 11.0)),
-                        Text(param[1], style: const TextStyle(fontSize: 16.0)),
+                        // Text(param[0] + ":", style: TextStyle(fontSize: 11.0)),
+                         
+                        Image.asset(param[0], height:0.3*size.height , width:2*size.width),
+                        Center(child: Text(param[1], style: const TextStyle(fontSize: 16.0))),
                         SizedBox(
                             height: MediaQuery.of(context).size.height * 0.02),
                       ],

@@ -45,8 +45,8 @@ dependencies:
   flutter_osm_plugin: ^0.60.5
   http: ^0.13.5
   firebase_core: ^2.19.0
-  firebase_messaging: ^14.7.1
-  flutter_local_notifications: ^16.1.0
+  firebase_messaging: ^14.8.0
+  flutter_local_notifications: ^18.0.1
   font_awesome_flutter: ^10.6.0
   shared_preferences: ^2.2.2
   icons_launcher: ^2.1.7
@@ -100,6 +100,7 @@ flutter:
   assets:
     - assets/more.png
     - assets/Icon.png
+    - lib/FoodOrder/assets/images/image.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
