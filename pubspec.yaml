@@ -67,7 +67,7 @@ dependencies:
   adaptive_theme: ^3.6.0
   flutter_map: ^4.0.0
   latlong2: ^0.8.2
-  mapbox_maps_flutter: ^1.1.0
+  mapbox_maps_flutter: ^2.4.0
   firebase_analytics: ^10.10.5
   geolocator: ^12.0.0
   dio_cache_interceptor: ^3.5.0

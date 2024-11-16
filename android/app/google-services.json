@@ -1,67 +1,26 @@
 {
   "project_info": {
-    "project_number": "1083943258514",
-    "project_id": "insiit-production",
-    "storage_bucket": "insiit-production.appspot.com"
+    "project_number": "151576489107",
+    "project_id": "insiit-bf73d",
+    "storage_bucket": "insiit-bf73d.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1083943258514:android:1256252a7357527347194b",
+        "mobilesdk_app_id": "1:151576489107:android:37fcc2fa991aa380707166",
         "android_client_info": {
           "package_name": "com.metis.insiit"
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "1083943258514-elbt0ihjctklmk5gbns78nst2lgc5vnb.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.metis.insiit",
-            "certificate_hash": "dfb63c89dab0ec427fb05b248e758ad4fbd871d1"
-          }
-        },
-        {
-          "client_id": "1083943258514-ftpa2if2rhfo51e3j00bu0ug4ns98lrt.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.metis.insiit",
-            "certificate_hash": "b4cf49cb3e013effab843b5dd1f4b135792954bd"
-          }
-        },
-        {
-          "client_id": "1083943258514-s3t9jd52a775743dk9pvbquuiepua6p7.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.metis.insiit",
-            "certificate_hash": "970d4dd540e406842bd4470bb34da5a6bd6bbb6b"
-          }
-        },
-        {
-          "client_id": "1083943258514-3c6ujopt4j13f4fnco8a1teu156q9sko.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
+      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyCI7fZEKHJ3sqxYTIRyCrpX9cpV6f8OXkg"
+          "current_key": "AIzaSyDOuNIO7-Ys1EwyC46JPfBTMRXhiMa-fQQ"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "1083943258514-3c6ujopt4j13f4fnco8a1teu156q9sko.apps.googleusercontent.com",
-              "client_type": 3
-            },
-            {
-              "client_id": "1083943258514-3j06n6mbdg5vk81rnl73bbdsjgtue7tk.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.example.insiit.RunnerTests"
-              }
-            }
-          ]
+          "other_platform_oauth_client": []
         }
       }
     }
